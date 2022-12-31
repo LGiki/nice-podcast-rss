@@ -1,0 +1,562 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "Content-Type",
+          "operation": "set",
+          "value": "text/plain;charset=UTF-8"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "*.ximalaya.com/album/*.xml",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "Content-Type",
+          "operation": "set",
+          "value": "text/plain;charset=UTF-8"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "feed.xyzfm.space/*",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "Content-Type",
+          "operation": "set",
+          "value": "text/plain;charset=UTF-8"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "feeds.fireside.fm/*/rss",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "Content-Type",
+          "operation": "set",
+          "value": "text/plain;charset=UTF-8"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "anchor.fm/s/*/podcast/rss",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 5,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "Content-Type",
+          "operation": "set",
+          "value": "text/plain;charset=UTF-8"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "feeds.buzzsprout.com/*.rss",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 6,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "Content-Type",
+          "operation": "set",
+          "value": "text/plain;charset=UTF-8"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "host.podapi.xyz/*/feed.rss",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 7,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "Content-Type",
+          "operation": "set",
+          "value": "text/plain;charset=UTF-8"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "*.typlog.io/feed/audio.xml",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 8,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "Content-Type",
+          "operation": "set",
+          "value": "text/plain;charset=UTF-8"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "*.libsyn.com/rss",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 9,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "Content-Type",
+          "operation": "set",
+          "value": "text/plain;charset=UTF-8"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "feeds.acast.com/public/shows/*",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 10,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "Content-Type",
+          "operation": "set",
+          "value": "text/plain;charset=UTF-8"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "rss.lizhi.fm/rss/*.xml",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 11,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "Content-Type",
+          "operation": "set",
+          "value": "text/plain;charset=UTF-8"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "feeds.redcircle.com/*",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 12,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "Content-Type",
+          "operation": "set",
+          "value": "text/plain;charset=UTF-8"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "justpodmedia.com/rss/*.xml",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 13,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "Content-Type",
+          "operation": "set",
+          "value": "text/plain;charset=UTF-8"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "*.proxy.wavpub.com/*.xml",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 14,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "Content-Type",
+          "operation": "set",
+          "value": "text/plain;charset=UTF-8"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "papi.qingting.fm/podcast/channels/*",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 15,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "Content-Type",
+          "operation": "set",
+          "value": "text/plain;charset=UTF-8"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "api.vistopia.com.cn/rss/program/*.xml",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 16,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "Content-Type",
+          "operation": "set",
+          "value": "text/plain;charset=UTF-8"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "feed.tangsuanradio.com/*.xml",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 17,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "Content-Type",
+          "operation": "set",
+          "value": "text/plain;charset=UTF-8"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "getpodcast.xyz/data/*.xml",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 18,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "Content-Type",
+          "operation": "set",
+          "value": "text/plain;charset=UTF-8"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "feeds.megaphone.fm/*",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 19,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "Content-Type",
+          "operation": "set",
+          "value": "text/plain;charset=UTF-8"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "feeds.simplecast.com/*",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 20,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "Content-Type",
+          "operation": "set",
+          "value": "text/plain;charset=UTF-8"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "media.rss.com/*/feed.xml",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 21,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "Content-Type",
+          "operation": "set",
+          "value": "text/plain;charset=UTF-8"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "feed.podbean.com/*/feed.xml",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 22,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "Content-Type",
+          "operation": "set",
+          "value": "text/plain;charset=UTF-8"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "feeds.sounder.fm/*/rss.xml",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 23,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "Content-Type",
+          "operation": "set",
+          "value": "text/plain;charset=UTF-8"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "feeds.soundon.fm/podcasts/*.xml",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 24,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "Content-Type",
+          "operation": "set",
+          "value": "text/plain;charset=UTF-8"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "feeds.npr.org/*/podcast.xml",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 25,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "Content-Type",
+          "operation": "set",
+          "value": "text/plain;charset=UTF-8"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "rss.art19.com/*",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 26,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "Content-Type",
+          "operation": "set",
+          "value": "text/plain;charset=UTF-8"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "rss.art19.com/*",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 27,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "Content-Type",
+          "operation": "set",
+          "value": "text/plain;charset=UTF-8"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "omnycontent.com/d/playlist/*/podcast.rss",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 28,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "Content-Type",
+          "operation": "set",
+          "value": "text/plain;charset=UTF-8"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "*.omnycontent.com/d/playlist/*/podcast.rss",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  }
+]
