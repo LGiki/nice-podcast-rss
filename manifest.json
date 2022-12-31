@@ -12,9 +12,7 @@
   },
   "permissions": [
     "scripting",
-    "declarativeNetRequest",
-    "declarativeNetRequestFeedback",
-    "declarativeNetRequestWithHostAccess"
+    "declarativeNetRequest"
   ],
   "action": {},
   "declarative_net_request": {
@@ -27,7 +25,33 @@
     ]
   },
   "host_permissions": [
-    "*://*/*"
+    "*://www.ximalaya.com/album/*.xml",
+    "*://feeds.fireside.fm/*/rss",
+    "*://feed.xyzfm.space/*",
+    "*://anchor.fm/s/*/podcast/rss",
+    "*://feeds.buzzsprout.com/*.rss",
+    "*://host.podapi.xyz/*/feed.rss",
+    "*://*.typlog.io/feed/audio.xml",
+    "*://*.libsyn.com/rss",
+    "*://feeds.acast.com/public/shows/*",
+    "*://rss.lizhi.fm/rss/*.xml",
+    "*://feeds.redcircle.com/*",
+    "*://justpodmedia.com/rss/*.xml",
+    "*://*.proxy.wavpub.com/*.xml",
+    "*://papi.qingting.fm/podcast/channels/*",
+    "*://api.vistopia.com.cn/rss/program/*.xml",
+    "*://feed.tangsuanradio.com/*.xml",
+    "*://getpodcast.xyz/data/*.xml",
+    "*://feeds.megaphone.fm/*",
+    "*://feeds.simplecast.com/*",
+    "*://media.rss.com/*/feed.xml",
+    "*://feed.podbean.com/*/feed.xml",
+    "*://feeds.sounder.fm/*/rss.xml",
+    "*://feeds.soundon.fm/podcasts/*.xml",
+    "*://feeds.npr.org/*/podcast.xml",
+    "*://rss.art19.com/*",
+    "*://omnycontent.com/d/playlist/*/podcast.rss",
+    "*://*.omnycontent.com/d/playlist/*/podcast.rss"
   ],
   "content_scripts": [
     {
