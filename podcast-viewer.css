@@ -78,6 +78,7 @@ a {
     height: 200px;
     border-radius: 10px;
     vertical-align: bottom;
+    object-fit: cover;
 }
 
 .episode-info {
