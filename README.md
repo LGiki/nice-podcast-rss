@@ -8,7 +8,7 @@ A browser extension that makes podcast RSS displayed more friendly.
 
 # Screenshot
 
-
+![](screenshot.png)
 
 # Supported Platforms
 
@@ -49,4 +49,4 @@ A browser extension that makes podcast RSS displayed more friendly.
 
 # License
 
-MIT License.
+MIT License
