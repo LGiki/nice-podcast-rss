@@ -10,6 +10,12 @@ A browser extension that makes podcast RSS displayed more friendly.
 
 ![](screenshot.png)
 
+# Installation
+
+Install from [Chrome Web Store](https://chrome.google.com/webstore/detail/ofofpfeldepmeolpbcmehmfgakjnlekf):
+
+[![](chrome_web_store.svg)](https://chrome.google.com/webstore/detail/ofofpfeldepmeolpbcmehmfgakjnlekf)
+
 # Supported Platforms
 
 | Platform       | URL Pattern                                                  |
