@@ -258,12 +258,16 @@ const generatePodcastHead = (container, podcast) => {
         qrCodeContainer.style.display = 'none'
     })
 
-    podcastCoverContainer.href = podcast.itunes.image
-    podcastCover.title = podcast.title
-    podcastCover.alt = podcast.title
-    podcastCover.src = podcast.itunes.image
-    podcastTitle.innerText = podcast.title
-    podcastDescription.innerHTML = podcast.description
+    if (podcast.itunes && podcast.itunes.image) {
+        podcastCoverContainer.href = podcast.itunes.image
+        podcastCover.src = podcast.itunes.image
+    }
+
+    podcastCover.title = podcast.title || ''
+    podcastCover.alt = podcast.title || ''
+    podcastTitle.innerText = podcast.title || ''
+
+    podcastDescription.innerHTML = podcast.description || ''
     if (podcast.itunes.author) {
         podcastAuthor.innerText = podcast.itunes.author
     } else if (podcast.author) {
@@ -292,34 +296,42 @@ const generateEpisodeItems = (container, podcast) => {
             viewMore.parentElement.removeChild(viewMore)
         })
 
-        episodeCover.title = item.title
-        episodeCover.alt = item.title
-        const formattedPublishDate = dayjs(item.pubDate).format('YYYY-MM-DD HH:mm:ss')
-        episodePublishDate.innerText = `📅 ${formattedPublishDate}`
+        if (item.pubDate) {
+            const formattedPublishDate = dayjs(item.pubDate).format('YYYY-MM-DD HH:mm:ss')
+            episodePublishDate.innerText = `📅 ${formattedPublishDate}`
+        }
 
         let episodeCoverUrl = ''
         if (item.itunes && item.itunes.image) {
             episodeCoverUrl = item.itunes.image
-        } else if (podcast.itunes && podcast.itunes.image){
+        } else if (podcast.itunes && podcast.itunes.image) {
             episodeCoverUrl = podcast.itunes.image
         }
 
         episodeCoverContainer.href = episodeCoverUrl
         episodeCover.src = episodeCoverUrl
 
+        if (item.title) {
+            episodeCover.title = item.title
+            episodeCover.alt = item.title
+        }
+
         episodeTitle.innerText = item.title
         if (item.itunes && item.itunes.summary) {
             episodeDescription.innerHTML = item.itunes.summary
-        } else {
+        } else if (item.description) {
             episodeDescription.innerHTML = item.description
         }
+
         new Shikwasa.Player({
             container: playerContainer,
             audio: {
-                title: item.title,
-                artist: podcast.title,
-                cover: episodeCoverUrl,
-                src: item.enclosure.url,
+                title: item.title || 'No title',
+                artist: podcast.title || 'No artist',
+                cover: episodeCoverUrl || '',
+                src: item.enclosure
+                    ? (item.enclosure.url || '')
+                    : '',
             },
             speedOptions: playerSpeedOptions,
             download: true,
@@ -345,7 +357,7 @@ const generateBackToTopButton = (container) => {
             backToTop.style.opacity = '0';
         }
     })
-    backToTop.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}))
+    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }))
     container.appendChild(backToTop)
 }
 
