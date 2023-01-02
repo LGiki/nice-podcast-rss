@@ -4,7 +4,7 @@
   "description": "Make podcast RSS displayed more friendly",
   "author": "LGiki",
   "homepage_url": "https://github.com/LGiki/nice-podcast-rss",
-  "version": "1.0.0.0",
+  "version": "1.0.0.1",
   "icons": {
     "16": "icons/icon-16.png",
     "48": "icons/icon-48.png",
