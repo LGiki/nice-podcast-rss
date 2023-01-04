@@ -79,11 +79,13 @@ const parseEpisodeItem = (itemElement) => {
             case 'title':
             case 'guid':
             case 'link':
-            case 'description':
             case 'dc:creator':
             case 'pubDate':
             case 'author':
                 item[element.tagName] = element.firstChild ? element.firstChild.wholeText : ''
+                break
+            case 'description':
+                item['description'] = element.firstChild ? element.firstChild.wholeText.replaceAll('\n', '<br/>') : ''
                 break
             case 'itunes:episode':
             case 'itunes:subtitle':
@@ -140,7 +142,6 @@ const parsePodcastRSS = (rssElement) => {
         switch (element.tagName) {
             case 'copyright':
             case 'title':
-            case 'description':
             case 'link':
             case 'language':
             case 'generator':
@@ -149,13 +150,15 @@ const parsePodcastRSS = (rssElement) => {
             case 'pubDate':
                 podcast[element.tagName] = element.firstChild ? element.firstChild.wholeText : ''
                 break
+            case 'description':
+                podcast['description'] = element.firstChild ? element.firstChild.wholeText.replaceAll('\n', '<br/>') : ''
+                break
             case 'itunes:title':
             case 'itunes:subtitle':
             case 'itunes:author':
             case 'itunes:type':
             case 'itunes:explicit':
             case 'itunes:keywords':
-            case 'itunes:summary':
             case 'itunes:new-feed-url':
             case 'fireside:hostname':
             case 'fireside:genDate':
@@ -165,6 +168,12 @@ const parsePodcastRSS = (rssElement) => {
                     podcast[prefix] = {}
                 }
                 podcast[prefix][key] = element.firstChild ? element.firstChild.wholeText : ''
+                break
+            case 'itunes:summary':
+                if (!podcast['itunes']) {
+                    podcast['itunes'] = {}
+                }
+                podcast['itunes']['summary'] = element.firstChild ? element.firstChild.wholeText.replaceAll('\n', '<br/>') : ''
                 break
             case 'itunes:image':
                 if (!podcast['itunes']) {
@@ -267,7 +276,12 @@ const generatePodcastHead = (container, podcast) => {
     podcastCover.alt = podcast.title || ''
     podcastTitle.innerText = podcast.title || ''
 
-    podcastDescription.innerHTML = podcast.description || ''
+    if (podcast.description) {
+        podcastDescription.innerHTML = podcast.description
+    } else if (podcast.itunes && podcast.itunes.summary) {
+        podcastDescription.innerHTML = podcast.itunes.summary
+    }
+
     if (podcast.itunes.author) {
         podcastAuthor.innerText = podcast.itunes.author
     } else if (podcast.author) {
