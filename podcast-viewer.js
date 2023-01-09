@@ -351,7 +351,8 @@ const generateEpisodeItems = (container, podcast) => {
             download: true,
             fixed: {
                 type: 'static'
-            }
+            },
+            preload: 'none'
         })
 
         fragment.appendChild(episodeItem)
