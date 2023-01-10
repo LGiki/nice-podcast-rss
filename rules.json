@@ -558,5 +558,25 @@
         "main_frame"
       ]
     }
+  },
+  {
+    "id": 29,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "Content-Type",
+          "operation": "set",
+          "value": "text/plain;charset=UTF-8"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "feeds.libsyn.com/*/rss",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
   }
 ]
