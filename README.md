@@ -24,7 +24,7 @@ Install from [Chrome Web Store](https://chrome.google.com/webstore/detail/ofofpf
 | Fireside       | `feeds.fireside.fm/*/rss`                                    |
 | Buzzsprout     | `feeds.buzzsprout.com/*.rss`                                 |
 | Typlog         | `*.typlog.io/feed/audio.xml`                                 |
-| Libsyn         | `*.libsyn.com/rss`                                           |
+| Libsyn         | `*.libsyn.com/rss`<br />`feeds.libsyn.com/*/rss`             |
 | Acast          | `feeds.acast.com/public/shows/*`                             |
 | Megaphone      | `feeds.megaphone.fm/*`                                       |
 | Simplecast     | `feeds.simplecast.com/*`                                     |
