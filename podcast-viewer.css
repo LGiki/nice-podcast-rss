@@ -3,7 +3,7 @@ body {
     color: #332c2b;
     background-color: #f7f9fa;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
-    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+        Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     padding: 1rem;
 }
 
@@ -68,8 +68,15 @@ a {
 
 .episode-item-container {
     display: flex;
-    gap: 1.5rem;
+    flex-direction: column;
     position: relative;
+    overflow: hidden;
+}
+
+.episode-info-container {
+    display: flex;
+    gap: 1.5rem;
+    width: 100%;
     overflow: hidden;
 }
 
@@ -85,9 +92,9 @@ a {
     display: flex;
     flex-direction: column;
     gap: .5rem;
-    max-height: 320px;
-    overflow: hidden;
     position: relative;
+    flex: 1;
+    width: 0;
     flex: 1;
 }
 
@@ -100,8 +107,9 @@ a {
     padding: .5rem 0;
     cursor: pointer;
     background: linear-gradient(rgba(255, 255, 255, 0.6), #fff);
-    backdrop-filter: blur(7px);
+    backdrop-filter: blur(15px);
     z-index: 10;
+    box-shadow: rgb(0 0 0 / 8%) 0px -3px 20px 0px
 }
 
 .episode-title {
@@ -110,7 +118,30 @@ a {
 }
 
 .episode-description {
+    padding: 10px 0;
     color: #454545;
+    max-height: 320px;
+    overflow: hidden;
+}
+
+.episode-description p {
+    margin-bottom: 15px;
+}
+
+.episode-description img {
+    width: 100%;
+}
+
+.episode-description a {
+    text-decoration: none;
+    color: #454545;
+    position: relative;
+    display: inline;
+    background-image: linear-gradient(to right, #454545 100%, transparent 100%);
+    padding: 2px 0px;
+    background-position: center bottom;
+    background-repeat: repeat-x;
+    background-size: 1px 2px;
 }
 
 .episode-publish-date {
@@ -175,7 +206,7 @@ a {
 }
 
 .player {
-    padding: .5rem;
+    padding: 5px;
 }
 
 .footer {

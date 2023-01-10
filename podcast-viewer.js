@@ -29,20 +29,22 @@ const PodcastHeadHtml = `
 `
 
 const EpisodeItemHtml = `
-  <div class="episode-info">
-    <h1 class="episode-title"></h1>
-    <div class="episode-publish-date"></div>
-    <div class="player"></div>
-    <p class="episode-description"></p>
+  <div class="episode-info-container">
+    <div class="episode-info">
+      <h1 class="episode-title"></h1>
+      <div class="episode-publish-date"></div>
+      <div class="player"></div>
+    </div>
+    <a class="episode-cover-container" target="_blank">
+      <img
+        alt="Episode Cover"
+        class="episode-cover"
+        loading="lazy"
+      />
+    </a>
   </div>
+  <div class="episode-description"></div>
   <div class="view-more">👀 View more</div>
-  <a class="episode-cover-container" target="_blank">
-    <img
-      alt="Episode Cover"
-      class="episode-cover"
-      loading="lazy"
-    />
-  </a>
 `
 
 const BackToTopTemplate = `
@@ -296,7 +298,6 @@ const generateEpisodeItems = (container, podcast) => {
     const episodeItemTemplate = createElement(EpisodeItemHtml, 'item-box episode-item-container')
     podcast.items.forEach(item => {
         const episodeItem = episodeItemTemplate.cloneNode(true)
-        const episodeInfo = episodeItem.querySelector('.episode-info')
         const episodeCoverContainer = episodeItem.querySelector('.episode-cover-container')
         const episodeCover = episodeItem.querySelector('.episode-cover')
         const episodeTitle = episodeItem.querySelector('.episode-title')
@@ -305,10 +306,12 @@ const generateEpisodeItems = (container, podcast) => {
         const playerContainer = episodeItem.querySelector('.player')
         const viewMore = episodeItem.querySelector('.view-more')
 
-        viewMore.addEventListener('click', () => {
-            episodeInfo.style.maxHeight = 'max-content'
+        const removeViewMoreAndExpandPodcastDescription = () => {
+            episodeDescription.style.maxHeight = 'max-content'
             viewMore.parentElement.removeChild(viewMore)
-        })
+        }
+
+        viewMore.addEventListener('click', removeViewMoreAndExpandPodcastDescription)
 
         if (item.pubDate) {
             const formattedPublishDate = dayjs(item.pubDate).format('YYYY-MM-DD HH:mm:ss')
@@ -335,6 +338,19 @@ const generateEpisodeItems = (container, podcast) => {
             episodeDescription.innerHTML = item.itunes.summary
         } else if (item.description) {
             episodeDescription.innerHTML = item.description
+        }
+
+        if (episodeDescription.innerHTML.length === 0) {
+            removeViewMoreAndExpandPodcastDescription()
+        } else {
+            setTimeout(
+                () => {
+                    if (episodeDescription.offsetHeight < 320) {
+                        removeViewMoreAndExpandPodcastDescription()
+                    }
+                },
+                0
+            )
         }
 
         new Shikwasa.Player({
