@@ -345,7 +345,7 @@ const generateEpisodeItems = (container, podcast) => {
         } else {
             setTimeout(
                 () => {
-                    if (episodeDescription.offsetHeight < 320) {
+                    if (episodeDescription.offsetHeight < 260) {
                         removeViewMoreAndExpandPodcastDescription()
                     }
                 },
