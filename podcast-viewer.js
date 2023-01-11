@@ -397,6 +397,18 @@ const generateFooter = (container) => {
     container.appendChild(footer)
 }
 
+const changeFavicon = (podcast) => {
+    if (podcast.itunes && podcast.itunes.image) {
+        let link = document.querySelector("link[rel~='icon']")
+        if (!link) {
+            link = document.createElement('link')
+            link.rel = 'icon'
+            document.getElementsByTagName('head')[0].appendChild(link)
+        }
+        link.href = podcast.itunes.image
+    }
+}
+
 const generatePodcastPage = (podcast) => {
     document.title = podcast.title
     const containerDiv = document.createElement('div')
@@ -406,6 +418,7 @@ const generatePodcastPage = (podcast) => {
     generateBackToTopButton(containerDiv)
     generateFooter(containerDiv)
     document.body.appendChild(containerDiv)
+    changeFavicon(podcast)
 }
 
 const printExtensionInfo = () => {
