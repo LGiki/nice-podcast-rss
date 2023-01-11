@@ -229,7 +229,7 @@ const parsePodcastRSS = (rssElement) => {
                             podcast['image'][imageChild.tagName] = imageChild.firstChild ? imageChild.firstChild.wholeText : ''
                             break
                         default:
-                            console.log(`[Nice Podcast RSS] Unknown podcast image key: ${imageChild.tagName}`)
+                            // console.log(`[Nice Podcast RSS] Unknown podcast image key: ${imageChild.tagName}`)
                             break
                     }
                 })
@@ -449,7 +449,6 @@ document.addEventListener('readystatechange', () => {
             document.body.innerHTML = '';
 
             const podcast = parsePodcastRSS(rssElement)
-            console.log(podcast)
 
             generatePodcastPage(podcast)
         }
