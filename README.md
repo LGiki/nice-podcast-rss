@@ -2,11 +2,7 @@
 
 <img src="./icons/icon.svg" width="100" height="100" align="right" />
 
-[![GitHub](https://img.shields.io/github/license/LGiki/nice-podcast-rss?style=flat-square)](LICENSE)
-
-[![Chrome Web Store](https://img.shields.io/chrome-web-store/v/ofofpfeldepmeolpbcmehmfgakjnlekf?color=red&logo=google-chrome&logoColor=white&style=flat-square)](https://chrome.google.com/webstore/detail/nice-podcast-rss/ofofpfeldepmeolpbcmehmfgakjnlekf)
-
-[![Edge Add-on](https://img.shields.io/badge/dynamic/json?label=edge%20add-on&prefix=v&color=red&logo=microsoftedge&logoColor=white&style=flat-square&query=%24.version&url=https%3A%2F%2Fmicrosoftedge.microsoft.com%2Faddons%2Fgetproductdetailsbycrxid%2Fjiajdakidkmamepkdaclhefhfjnikhpc)](https://microsoftedge.microsoft.com/addons/detail/nice-podcast-rss/jiajdakidkmamepkdaclhefhfjnikhpc)
+[![GitHub](https://img.shields.io/github/license/LGiki/nice-podcast-rss?style=flat-square)](LICENSE) [![Chrome Web Store](https://img.shields.io/chrome-web-store/v/ofofpfeldepmeolpbcmehmfgakjnlekf?color=red&logo=google-chrome&logoColor=white&style=flat-square)](https://chrome.google.com/webstore/detail/nice-podcast-rss/ofofpfeldepmeolpbcmehmfgakjnlekf) [![Edge Add-on](https://img.shields.io/badge/dynamic/json?label=edge%20add-on&prefix=v&color=red&logo=microsoftedge&logoColor=white&style=flat-square&query=%24.version&url=https%3A%2F%2Fmicrosoftedge.microsoft.com%2Faddons%2Fgetproductdetailsbycrxid%2Fjiajdakidkmamepkdaclhefhfjnikhpc)](https://microsoftedge.microsoft.com/addons/detail/nice-podcast-rss/jiajdakidkmamepkdaclhefhfjnikhpc)
 
 
 A browser extension that makes podcast RSS displayed more friendly.
