@@ -2,7 +2,12 @@
 
 <img src="./icons/icon.svg" width="100" height="100" align="right" />
 
-![GitHub](https://img.shields.io/github/license/LGiki/nice-podcast-rss?style=flat-square)
+[![GitHub](https://img.shields.io/github/license/LGiki/nice-podcast-rss?style=flat-square)](LICENSE)
+
+[![Chrome Web Store](https://img.shields.io/chrome-web-store/v/ofofpfeldepmeolpbcmehmfgakjnlekf?color=red&logo=google-chrome&logoColor=white&style=flat-square)](https://chrome.google.com/webstore/detail/nice-podcast-rss/ofofpfeldepmeolpbcmehmfgakjnlekf)
+
+[![Edge Add-on](https://img.shields.io/badge/dynamic/json?label=edge%20add-on&prefix=v&color=red&logo=microsoftedge&logoColor=white&style=flat-square&query=%24.version&url=https%3A%2F%2Fmicrosoftedge.microsoft.com%2Faddons%2Fgetproductdetailsbycrxid%2Fjiajdakidkmamepkdaclhefhfjnikhpc)](https://microsoftedge.microsoft.com/addons/detail/nice-podcast-rss/jiajdakidkmamepkdaclhefhfjnikhpc)
+
 
 A browser extension that makes podcast RSS displayed more friendly.
 
@@ -12,9 +17,13 @@ A browser extension that makes podcast RSS displayed more friendly.
 
 # Installation
 
-Install from [Chrome Web Store](https://chrome.google.com/webstore/detail/ofofpfeldepmeolpbcmehmfgakjnlekf):
+- Install from [Chrome Web Store](https://chrome.google.com/webstore/detail/ofofpfeldepmeolpbcmehmfgakjnlekf):
 
-[![](chrome_web_store.svg)](https://chrome.google.com/webstore/detail/ofofpfeldepmeolpbcmehmfgakjnlekf)
+  [<img src="https://user-images.githubusercontent.com/20807713/212001658-8252c4b5-dce3-4571-bd8f-cc4695876555.svg" style="width:300px" />](https://chrome.google.com/webstore/detail/ofofpfeldepmeolpbcmehmfgakjnlekf)
+
+- Install from [Microsoft Edge Addons](https://microsoftedge.microsoft.com/addons/detail/nice-podcast-rss/jiajdakidkmamepkdaclhefhfjnikhpc):
+
+  [<img src="https://user-images.githubusercontent.com/20807713/212001768-365fc123-cfaa-4dfa-b88c-8d5aa9352820.png" style="width:300px" />](https://microsoftedge.microsoft.com/addons/detail/nice-podcast-rss/jiajdakidkmamepkdaclhefhfjnikhpc)
 
 # Supported Platforms
 
