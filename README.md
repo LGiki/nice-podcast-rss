@@ -51,6 +51,7 @@ A browser extension that makes podcast RSS displayed more friendly.
 | Get Podcast    | `getpodcast.xyz/data/*.xml`                                  |
 | Pod API        | `host.podapi.xyz/*/feed.rss`                                 |
 | Tangsuan Radio | `feed.tangsuanradio.com/*.xml`                               |
+| Casted         | `feeds.casted.us/*/feed`                                     |
 
 # Acknowledgements
 

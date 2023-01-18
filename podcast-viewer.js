@@ -423,7 +423,7 @@ const generatePodcastPage = (podcast) => {
 
 const printExtensionInfo = () => {
     console.log(
-        '%c✨%c Nice Podcast RSS v1.0.0.5 %c https://github.com/LGiki/nice-podcast-rss',
+        '%c✨%c Nice Podcast RSS v1.0.0.6 %c https://github.com/LGiki/nice-podcast-rss',
         'background-color:#bfd8bd;padding:4px;border-radius:4px 0 0 4px;',
         'background-color:#77bfa3;padding:4px;color:#fff;border-radius:0 4px 4px 0;',
         ''

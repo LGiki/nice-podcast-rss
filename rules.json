@@ -578,5 +578,25 @@
         "main_frame"
       ]
     }
+  },
+  {
+    "id": 30,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "Content-Type",
+          "operation": "set",
+          "value": "text/plain;charset=UTF-8"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "feeds.casted.us/*/feed",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
   }
 ]

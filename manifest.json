@@ -4,7 +4,7 @@
   "description": "Make podcast RSS displayed more friendly",
   "author": "LGiki",
   "homepage_url": "https://github.com/LGiki/nice-podcast-rss",
-  "version": "1.0.0.5",
+  "version": "1.0.0.6",
   "icons": {
     "16": "icons/icon-16.png",
     "48": "icons/icon-48.png",
@@ -52,7 +52,8 @@
     "*://feeds.npr.org/*/podcast.xml",
     "*://rss.art19.com/*",
     "*://omnycontent.com/d/playlist/*/podcast.rss",
-    "*://*.omnycontent.com/d/playlist/*/podcast.rss"
+    "*://*.omnycontent.com/d/playlist/*/podcast.rss",
+    "*://feeds.casted.us/*/feed"
   ],
   "content_scripts": [
     {
@@ -84,7 +85,8 @@
         "*://feeds.npr.org/*/podcast.xml",
         "*://rss.art19.com/*",
         "*://omnycontent.com/d/playlist/*/podcast.rss",
-        "*://*.omnycontent.com/d/playlist/*/podcast.rss"
+        "*://*.omnycontent.com/d/playlist/*/podcast.rss",
+        "*://feeds.casted.us/*/feed"
       ],
       "js": [
         "lib/shikwasa.min.js",
