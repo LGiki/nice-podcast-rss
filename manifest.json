@@ -53,7 +53,8 @@
     "*://rss.art19.com/*",
     "*://omnycontent.com/d/playlist/*/podcast.rss",
     "*://*.omnycontent.com/d/playlist/*/podcast.rss",
-    "*://feeds.casted.us/*/feed"
+    "*://feeds.casted.us/*/feed",
+    "*://feeds.boston.com/*"
   ],
   "content_scripts": [
     {
@@ -86,7 +87,8 @@
         "*://rss.art19.com/*",
         "*://omnycontent.com/d/playlist/*/podcast.rss",
         "*://*.omnycontent.com/d/playlist/*/podcast.rss",
-        "*://feeds.casted.us/*/feed"
+        "*://feeds.casted.us/*/feed",
+        "*://feeds.boston.com/*"
       ],
       "js": [
         "lib/shikwasa.min.js",

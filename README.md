@@ -52,6 +52,7 @@ A browser extension that makes podcast RSS displayed more friendly.
 | Pod API        | `host.podapi.xyz/*/feed.rss`                                 |
 | Tangsuan Radio | `feed.tangsuanradio.com/*.xml`                               |
 | Casted         | `feeds.casted.us/*/feed`                                     |
+| Boston         | `feeds.boston.com/*`                                         |
 
 # Acknowledgements
 
