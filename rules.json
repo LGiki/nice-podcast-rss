@@ -618,5 +618,25 @@
         "main_frame"
       ]
     }
+  },
+  {
+    "id": 32,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "Content-Type",
+          "operation": "set",
+          "value": "text/plain;charset=UTF-8"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "open.firstory.me/rss/user/*",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
   }
 ]

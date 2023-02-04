@@ -54,7 +54,8 @@
     "*://omnycontent.com/d/playlist/*/podcast.rss",
     "*://*.omnycontent.com/d/playlist/*/podcast.rss",
     "*://feeds.casted.us/*/feed",
-    "*://feeds.boston.com/*"
+    "*://feeds.boston.com/*",
+    "*://open.firstory.me/rss/user/*"
   ],
   "content_scripts": [
     {
@@ -88,7 +89,8 @@
         "*://omnycontent.com/d/playlist/*/podcast.rss",
         "*://*.omnycontent.com/d/playlist/*/podcast.rss",
         "*://feeds.casted.us/*/feed",
-        "*://feeds.boston.com/*"
+        "*://feeds.boston.com/*",
+        "*://open.firstory.me/rss/user/*"
       ],
       "js": [
         "lib/shikwasa.min.js",
