@@ -296,83 +296,85 @@ const generatePodcastHead = (container, podcast) => {
 const generateEpisodeItems = (container, podcast) => {
     const fragment = document.createDocumentFragment()
     const episodeItemTemplate = createElement(EpisodeItemHtml, 'item-box episode-item-container')
-    podcast.items.forEach(item => {
-        const episodeItem = episodeItemTemplate.cloneNode(true)
-        const episodeCoverContainer = episodeItem.querySelector('.episode-cover-container')
-        const episodeCover = episodeItem.querySelector('.episode-cover')
-        const episodeTitle = episodeItem.querySelector('.episode-title')
-        const episodePublishDate = episodeItem.querySelector('.episode-publish-date')
-        const episodeDescription = episodeItem.querySelector('.episode-description')
-        const playerContainer = episodeItem.querySelector('.player')
-        const viewMore = episodeItem.querySelector('.view-more')
+    if (podcast.items) {
+        podcast.items.forEach(item => {
+            const episodeItem = episodeItemTemplate.cloneNode(true)
+            const episodeCoverContainer = episodeItem.querySelector('.episode-cover-container')
+            const episodeCover = episodeItem.querySelector('.episode-cover')
+            const episodeTitle = episodeItem.querySelector('.episode-title')
+            const episodePublishDate = episodeItem.querySelector('.episode-publish-date')
+            const episodeDescription = episodeItem.querySelector('.episode-description')
+            const playerContainer = episodeItem.querySelector('.player')
+            const viewMore = episodeItem.querySelector('.view-more')
 
-        const removeViewMoreAndExpandPodcastDescription = () => {
-            episodeDescription.style.maxHeight = 'max-content'
-            viewMore.parentElement.removeChild(viewMore)
-        }
+            const removeViewMoreAndExpandPodcastDescription = () => {
+                episodeDescription.style.maxHeight = 'max-content'
+                viewMore.parentElement.removeChild(viewMore)
+            }
 
-        viewMore.addEventListener('click', removeViewMoreAndExpandPodcastDescription)
+            viewMore.addEventListener('click', removeViewMoreAndExpandPodcastDescription)
 
-        if (item.pubDate) {
-            const formattedPublishDate = dayjs(item.pubDate).format('YYYY-MM-DD HH:mm:ss')
-            episodePublishDate.innerText = `📅 ${formattedPublishDate}`
-        }
+            if (item.pubDate) {
+                const formattedPublishDate = dayjs(item.pubDate).format('YYYY-MM-DD HH:mm:ss')
+                episodePublishDate.innerText = `📅 ${formattedPublishDate}`
+            }
 
-        let episodeCoverUrl = ''
-        if (item.itunes && item.itunes.image) {
-            episodeCoverUrl = item.itunes.image
-        } else if (podcast.itunes && podcast.itunes.image) {
-            episodeCoverUrl = podcast.itunes.image
-        }
+            let episodeCoverUrl = ''
+            if (item.itunes && item.itunes.image) {
+                episodeCoverUrl = item.itunes.image
+            } else if (podcast.itunes && podcast.itunes.image) {
+                episodeCoverUrl = podcast.itunes.image
+            }
 
-        episodeCoverContainer.href = episodeCoverUrl
-        episodeCover.src = episodeCoverUrl
+            episodeCoverContainer.href = episodeCoverUrl
+            episodeCover.src = episodeCoverUrl
 
-        if (item.title) {
-            episodeCover.title = item.title
-            episodeCover.alt = item.title
-        }
+            if (item.title) {
+                episodeCover.title = item.title
+                episodeCover.alt = item.title
+            }
 
-        episodeTitle.innerText = item.title
-        if (item.itunes && item.itunes.summary) {
-            episodeDescription.innerHTML = item.itunes.summary
-        } else if (item.description) {
-            episodeDescription.innerHTML = item.description
-        }
+            episodeTitle.innerText = item.title
+            if (item.itunes && item.itunes.summary) {
+                episodeDescription.innerHTML = item.itunes.summary
+            } else if (item.description) {
+                episodeDescription.innerHTML = item.description
+            }
 
-        if (episodeDescription.innerHTML.length === 0) {
-            removeViewMoreAndExpandPodcastDescription()
-        } else {
-            setTimeout(
-                () => {
-                    if (episodeDescription.offsetHeight < 260) {
-                        removeViewMoreAndExpandPodcastDescription()
-                    }
+            if (episodeDescription.innerHTML.length === 0) {
+                removeViewMoreAndExpandPodcastDescription()
+            } else {
+                setTimeout(
+                    () => {
+                        if (episodeDescription.offsetHeight < 260) {
+                            removeViewMoreAndExpandPodcastDescription()
+                        }
+                    },
+                    0
+                )
+            }
+
+            new Shikwasa.Player({
+                container: playerContainer,
+                audio: {
+                    title: item.title || 'No title',
+                    artist: podcast.title || 'No artist',
+                    cover: episodeCoverUrl || '',
+                    src: item.enclosure
+                        ? (item.enclosure.url || '')
+                        : '',
                 },
-                0
-            )
-        }
+                speedOptions: playerSpeedOptions,
+                download: true,
+                fixed: {
+                    type: 'static'
+                },
+                preload: 'none'
+            })
 
-        new Shikwasa.Player({
-            container: playerContainer,
-            audio: {
-                title: item.title || 'No title',
-                artist: podcast.title || 'No artist',
-                cover: episodeCoverUrl || '',
-                src: item.enclosure
-                    ? (item.enclosure.url || '')
-                    : '',
-            },
-            speedOptions: playerSpeedOptions,
-            download: true,
-            fixed: {
-                type: 'static'
-            },
-            preload: 'none'
+            fragment.appendChild(episodeItem)
         })
-
-        fragment.appendChild(episodeItem)
-    })
+    }
     container.appendChild(fragment)
 }
 
